@@ -6,7 +6,7 @@ So we need to know how our inputs are checked. It's easy to find that there are 
 
 The answers for all the tasks except flag is quiet straightforword and we can guess some of them. For example, 42 for task 3. During the debug we see how they are compared with input and figure out `loc_401250` is a important position. It do the dispatch according to the `ERCP` strings we mentioned above.
 
-With a breakpoint here, we can examine the check process clearly. Symbol `0x1a` means your input should match a given character, `0x0a` skip one char forward, and so on. But soon we find special symbols `0x58` and `0x59`, which called `sub_4011c0` again with a substructure for check, and after a successful subcheck for `0x59` the check process failed.
+With a breakpoint here, we can examine the check process clearly. Symbol `0x1c` means your input should match a given character, `0x0c` skip one char forward, and so on. But soon we find special symbols `0x58` and `0x59`, which called `sub_4011c0` again with a substructure for check, and after a successful subcheck for `0x59` the check process failed.
 
 After a few tests I find the subcheck for `0x58` and `0x59` nearly do the same thing, and these two symbols are dispatched differently, maybe one should pass the check while the other __should not__.
 
