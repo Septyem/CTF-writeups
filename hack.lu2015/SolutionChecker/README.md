@@ -12,4 +12,6 @@ After a few tests I find the subcheck for `0x58` and `0x59` nearly do the same t
 
 This is the critical point for these reverse, I think, and the remaining part is just some dirty works to recover the flag one-by-one. Sadly I never expect the flag to be so looooooooooooooooooooooooooooooooooong. When I realize I should automate the recovery it's already too late.
 
-By the way, one of the tasks tells me not to use Wikipedia, so I searched `ERCP` but found nothing interesting. If one can consider about the endian issue and search `PCRE`, this job would be mush easier. 
+By the way, one of the tasks tells me not to use Wikipedia, so I searched `ERCP` but found nothing interesting. If one can consider about the endian issue and search `PCRE`, this job would be mush easier.
+
+And the final flag is `flag{PCRE_r3v3rsIn6_15_r34l_FUn_bu7_0nLy_1f_7h3_r3GEx_15_n07_7oo_l0n6}`.
