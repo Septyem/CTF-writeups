@@ -5,7 +5,7 @@
 google一下第一个结果就是<http://echochamber.me/viewtopic.php?t=111164>
 
 然后照着实现下就是了，代码如下
-···
+```
 from struct import unpack
 
 def chinese_remainder(n, a):
@@ -81,12 +81,12 @@ for i in range(len(cycles)):
 print nn
 print aa
 #print chinese_remainder(nn,aa)
-···
+```
 直接跑会报错就把中国剩余定理部分扔个sage了，注意下endian的问题得到结果·03acc61fd6819a6eb4bbd311c5e72818·
 
 ##babyfuscator
 放假在家手头没有angr，反正flag不同位互不影响，就用不那么优雅的方法一个个爆了
-···
+```
 >>> ans='X'*32
 >>> def v17(x):
 	return (x ^ 0x10) + 10) ^ 0x12;
@@ -519,11 +519,11 @@ SyntaxError: invalid syntax
 >>> aa
 'wk608t84naoce60t8cx0o82hrtoxxae8'
 >>> 
-···
+```
 
 ##Schrodingers_Debug
 似乎弄了个thread来测debug那就先静态看看，main函数里面的sub_4016e0有点可疑有一堆检查的if判断，算了一下大概是个类似this_is_not_flag的字符串，然后跟到sub_401890里面，类似的if结构，有个(*(&dword_40413C + 1) + 12)的byte不知道，那就爆一下好了，代码如下，省略了爆破中的一堆无用输出
-···
+```
 >>> d90='''C3 00 00 00 C3 00 00 00  CE 00 00 00 C4 00 00 00
 C6 00 00 00 CA 00 00 00  C5 00 00 00 D0 00 00 00
 C7 00 00 00 C3 00 00 00  C4 00 00 00 CF 00 00 00
@@ -560,11 +560,11 @@ C4 00 00 00'''.replace('\n',' ').replace('  ',' ')
 	
 195
 ScHr0d1ng3r_D3bUg
-···
+```
 
 ##Transformation
 程序很短，简单看了下逻辑，就是常量数组异或而已，代码如下
-···
+```
 >>> flag='''45 00 00 00 74 00 00 00  19 00 00 00 69 00 00 00
 58 00 00 00 3D 00 00 00  62 00 00 00 0F 00 00 00
 66 00 00 00 16 00 00 00  65 00 00 00 3A 00 00 00
@@ -608,7 +608,7 @@ ScHr0d1ng3r_D3bUg
 搜下文件开头的magic，虽然在github上找到个common lisp写的disasm包不过没跑起来，还有相关的[specification](http://www.cee.uma.pt/droide2/plataforma/documentation/fantom.pdf)
 
 后来swordfeng给了个反编译后的文件就结合上面的pdf看了下，t000中的循环还算明显
-···
+```
 lbl00AF:	mov	sl0014, sw0050
 	index	sl0014, a00E5, sl0014
 	mov	sl0018, sw0057
@@ -621,9 +621,9 @@ lbl00AF:	mov	sl0014, sw0050
 lbl00C9:	mov	sw0053, sw0057
 	subcall	t014, ub0065
 	jmp	lbl0041
-···
+```
 主要这一段就是将sw0057和sw0053异或后与a00E5常量数组比较，sw0053有初值0xaf然后每次更新为sw0057的值，sw0057则跟输入有关，因为sw0057的复制是通过asl+or操作逐位进行的，可能会有类似endian的问题，所以尝试了下把输入位反过来就看到可见字符了，代码如下
-···
+```
 >>> sword=[0xC9, 0x50, 0xB0, 0x60, 0x38, 0x72, 0x2, 0xA0, 0xA8, 0xE8, 0xB4, 0x4C, 0x30, 0xC8, 0xC2, 0x80, 0xF6, 0xD4, 0x80, 0xE0, 0xC2, 0xFA, 0x90, 0x1C, 0x4C, 0x34, 0x44, 0xD0, 0x80, 0xE0, 0xBA, 0x72]
 >>> def rev(a):
 	t=bin(a)[2:]
@@ -644,4 +644,4 @@ lbl00C9:	mov	sw0053, sw0057
 >>> a
 'flag{5uper_mar10_tur1ng_mAchin3}'
 >>>
-···
+```
