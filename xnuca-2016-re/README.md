@@ -82,7 +82,7 @@ print nn
 print aa
 #print chinese_remainder(nn,aa)
 ```
-直接跑会报错就把中国剩余定理部分扔个sage了，注意下endian的问题得到结果·03acc61fd6819a6eb4bbd311c5e72818·
+直接跑会报错就把中国剩余定理部分扔个sage了，注意下endian的问题得到结果`03acc61fd6819a6eb4bbd311c5e72818`
 
 ##babyfuscator
 放假在家手头没有angr，反正flag不同位互不影响，就用不那么优雅的方法一个个爆了
