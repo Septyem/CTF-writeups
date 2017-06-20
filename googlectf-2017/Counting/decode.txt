@@ -1,0 +1,588 @@
+Python 2.7.10 (default, May 23 2015, 09:44:00) [MSC v.1500 64 bit (AMD64)] on win32
+Type "copyright", "credits" or "license()" for more information.
+>>> ================================ RESTART ================================
+>>> 
+119
+---cmd: 0---
+if regs[0]
+	--regs[0]
+	jmp 1
+else
+	jmp 2
+---cmd: 1---
+++regs[1]
+jmp 0
+---cmd: 2---
+++regs[2]
+jmp 3
+---cmd: 3---
+++regs[2]
+jmp 4
+---cmd: 4---
+++regs[2]
+jmp 5
+---cmd: 5---
+++regs[2]
+jmp 6
+---cmd: 6---
+++regs[2]
+jmp 7
+---cmd: 7---
+++regs[2]
+jmp 8
+---cmd: 8---
+++regs[2]
+jmp 9
+---cmd: 9---
+++regs[2]
+jmp 10
+---cmd: 10---
+++regs[2]
+jmp 11
+---cmd: 11---
+++regs[2]
+jmp 12
+---cmd: 12---
+++regs[2]
+jmp 13
+---cmd: 13---
+save regs all
+call 108
+store regs 0-0
+jmp 14
+---cmd: 14---
+if regs[0]
+	--regs[0]
+	finish
+else
+	jmp 15
+---cmd: 15---
+save regs all
+call 20
+store regs 0-0
+jmp 16
+---cmd: 16---
+if regs[2]
+	--regs[2]
+	jmp 16
+else
+	jmp 17
+---cmd: 17---
+if regs[0]
+	--regs[0]
+	jmp 18
+else
+	jmp 19
+---cmd: 18---
+++regs[2]
+jmp 17
+---cmd: 19---
+save regs all
+call 64
+store regs 0-0
+finish
+---cmd: 20---
+if regs[2]
+	--regs[2]
+	jmp 20
+else
+	jmp 21
+---cmd: 21---
+save regs all
+call 29
+store regs 0-0
+jmp 22
+---cmd: 22---
+if regs[0]
+	--regs[0]
+	jmp 23
+else
+	jmp 24
+---cmd: 23---
+++regs[2]
+jmp 22
+---cmd: 24---
+if regs[1]
+	--regs[1]
+	jmp 25
+else
+	jmp 26
+---cmd: 25---
+if regs[25]
+	--regs[25]
+	jmp 0
+else
+	jmp 21
+---cmd: 26---
+if regs[0]
+	--regs[0]
+	jmp 26
+else
+	jmp 27
+---cmd: 27---
+if regs[2]
+	--regs[2]
+	jmp 28
+else
+	finish
+---cmd: 28---
+++regs[0]
+jmp 27
+---cmd: 29---
+if regs[2]
+	--regs[2]
+	jmp 29
+else
+	jmp 30
+---cmd: 30---
+save regs all
+call 84
+store regs 0-0
+jmp 31
+---cmd: 31---
+if regs[3]
+	--regs[3]
+	jmp 31
+else
+	jmp 32
+---cmd: 32---
+if regs[0]
+	--regs[0]
+	jmp 33
+else
+	jmp 34
+---cmd: 33---
+++regs[3]
+jmp 32
+---cmd: 34---
+if regs[3]
+	--regs[3]
+	jmp 35
+else
+	jmp 42
+---cmd: 35---
+if regs[3]
+	--regs[3]
+	jmp 36
+else
+	jmp 42
+---cmd: 36---
+save regs all
+call 45
+store regs 0-0
+jmp 37
+---cmd: 37---
+++regs[2]
+jmp 38
+---cmd: 38---
+if regs[1]
+	--regs[1]
+	jmp 38
+else
+	jmp 39
+---cmd: 39---
+if regs[0]
+	--regs[0]
+	jmp 40
+else
+	jmp 41
+---cmd: 40---
+++regs[1]
+jmp 39
+---cmd: 41---
+if regs[25]
+	--regs[25]
+	jmp 0
+else
+	jmp 30
+---cmd: 42---
+if regs[0]
+	--regs[0]
+	jmp 42
+else
+	jmp 43
+---cmd: 43---
+if regs[2]
+	--regs[2]
+	jmp 44
+else
+	finish
+---cmd: 44---
+++regs[0]
+jmp 43
+---cmd: 45---
+if regs[2]
+	--regs[2]
+	jmp 45
+else
+	jmp 46
+---cmd: 46---
+save regs all
+call 84
+store regs 0-0
+jmp 47
+---cmd: 47---
+if regs[0]
+	--regs[0]
+	jmp 48
+else
+	jmp 49
+---cmd: 48---
+++regs[2]
+jmp 47
+---cmd: 49---
+save regs all
+call 92
+store regs 0-1
+jmp 50
+---cmd: 50---
+if regs[1]
+	--regs[1]
+	jmp 51
+else
+	finish
+---cmd: 51---
+if regs[0]
+	--regs[0]
+	jmp 51
+else
+	jmp 52
+---cmd: 52---
+if regs[1]
+	--regs[1]
+	jmp 52
+else
+	jmp 53
+---cmd: 53---
+if regs[2]
+	--regs[2]
+	jmp 54
+else
+	jmp 55
+---cmd: 54---
+++regs[1]
+jmp 53
+---cmd: 55---
+save regs all
+call 84
+store regs 0-0
+jmp 56
+---cmd: 56---
+if regs[0]
+	--regs[0]
+	jmp 57
+else
+	jmp 58
+---cmd: 57---
+++regs[2]
+jmp 56
+---cmd: 58---
+save regs all
+call 84
+store regs 0-0
+jmp 59
+---cmd: 59---
+if regs[1]
+	--regs[1]
+	jmp 60
+else
+	jmp 61
+---cmd: 60---
+++regs[0]
+jmp 59
+---cmd: 61---
+if regs[2]
+	--regs[2]
+	jmp 62
+else
+	jmp 63
+---cmd: 62---
+++regs[0]
+jmp 61
+---cmd: 63---
+++regs[0]
+finish
+---cmd: 64---
+save regs all
+call 84
+store regs 0-0
+jmp 65
+---cmd: 65---
+if regs[3]
+	--regs[3]
+	jmp 65
+else
+	jmp 66
+---cmd: 66---
+if regs[0]
+	--regs[0]
+	jmp 67
+else
+	jmp 68
+---cmd: 67---
+++regs[3]
+jmp 66
+---cmd: 68---
+if regs[3]
+	--regs[3]
+	jmp 69
+else
+	finish
+---cmd: 69---
+++regs[0]
+jmp 70
+---cmd: 70---
+if regs[3]
+	--regs[3]
+	jmp 71
+else
+	finish
+---cmd: 71---
+if regs[1]
+	--regs[1]
+	jmp 72
+else
+	finish
+---cmd: 72---
+save regs all
+call 64
+store regs 0-0
+jmp 73
+---cmd: 73---
+if regs[4]
+	--regs[4]
+	jmp 73
+else
+	jmp 74
+---cmd: 74---
+if regs[0]
+	--regs[0]
+	jmp 75
+else
+	jmp 76
+---cmd: 75---
+++regs[4]
+jmp 74
+---cmd: 76---
+if regs[1]
+	--regs[1]
+	jmp 77
+else
+	finish
+---cmd: 77---
+save regs all
+call 64
+store regs 0-0
+jmp 78
+---cmd: 78---
+if regs[0]
+	--regs[0]
+	jmp 79
+else
+	jmp 80
+---cmd: 79---
+++regs[4]
+jmp 78
+---cmd: 80---
+if regs[1]
+	--regs[1]
+	jmp 80
+else
+	jmp 81
+---cmd: 81---
+if regs[4]
+	--regs[4]
+	jmp 82
+else
+	jmp 83
+---cmd: 82---
+++regs[1]
+jmp 81
+---cmd: 83---
+save regs all
+call 99
+store regs 0-0
+finish
+---cmd: 84---
+if regs[0]
+	--regs[0]
+	jmp 84
+else
+	jmp 85
+---cmd: 85---
+if regs[1]
+	--regs[1]
+	jmp 86
+else
+	finish
+---cmd: 86---
+++regs[0]
+jmp 85
+---cmd: 87---
+if regs[0]
+	--regs[0]
+	jmp 87
+else
+	jmp 88
+---cmd: 88---
+if regs[1]
+	--regs[1]
+	jmp 89
+else
+	jmp 90
+---cmd: 89---
+++regs[0]
+jmp 88
+---cmd: 90---
+if regs[2]
+	--regs[2]
+	jmp 91
+else
+	finish
+---cmd: 91---
+++regs[0]
+jmp 90
+---cmd: 92---
+if regs[0]
+	--regs[0]
+	jmp 92
+else
+	jmp 93
+---cmd: 93---
+if regs[1]
+	--regs[1]
+	jmp 93
+else
+	jmp 94
+---cmd: 94---
+if regs[2]
+	--regs[2]
+	jmp 95
+else
+	finish
+---cmd: 95---
+if regs[2]
+	--regs[2]
+	jmp 96
+else
+	jmp 98
+---cmd: 96---
+++regs[0]
+jmp 97
+---cmd: 97---
+if regs[25]
+	--regs[25]
+	jmp 0
+else
+	jmp 94
+---cmd: 98---
+++regs[1]
+finish
+---cmd: 99---
+save regs all
+call 108
+store regs 0-0
+jmp 100
+---cmd: 100---
+if regs[0]
+	--regs[0]
+	jmp 101
+else
+	jmp 103
+---cmd: 101---
+if regs[1]
+	--regs[1]
+	jmp 102
+else
+	finish
+---cmd: 102---
+++regs[0]
+jmp 101
+---cmd: 103---
+save regs all
+call 113
+store regs 0-0
+jmp 104
+---cmd: 104---
+if regs[1]
+	--regs[1]
+	jmp 104
+else
+	jmp 105
+---cmd: 105---
+if regs[0]
+	--regs[0]
+	jmp 106
+else
+	jmp 107
+---cmd: 106---
+++regs[1]
+jmp 105
+---cmd: 107---
+if regs[25]
+	--regs[25]
+	jmp 0
+else
+	jmp 99
+---cmd: 108---
+if regs[0]
+	--regs[0]
+	jmp 108
+else
+	jmp 109
+---cmd: 109---
+if regs[2]
+	--regs[2]
+	jmp 110
+else
+	finish
+---cmd: 110---
+if regs[1]
+	--regs[1]
+	jmp 111
+else
+	jmp 112
+---cmd: 111---
+if regs[25]
+	--regs[25]
+	jmp 0
+else
+	jmp 108
+---cmd: 112---
+++regs[0]
+finish
+---cmd: 113---
+if regs[2]
+	--regs[2]
+	jmp 114
+else
+	jmp 116
+---cmd: 114---
+if regs[1]
+	--regs[1]
+	jmp 115
+else
+	finish
+---cmd: 115---
+if regs[25]
+	--regs[25]
+	jmp 0
+else
+	jmp 113
+---cmd: 116---
+if regs[0]
+	--regs[0]
+	jmp 116
+else
+	jmp 117
+---cmd: 117---
+if regs[1]
+	--regs[1]
+	jmp 118
+else
+	finish
+---cmd: 118---
+++regs[0]
+jmp 117
+
+>>> 
