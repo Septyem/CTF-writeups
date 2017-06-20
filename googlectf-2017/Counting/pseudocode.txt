@@ -1,0 +1,86 @@
+main(r0):
+    if r0<11:
+        return 0 
+    r2=sub_20(r0)
+    return sub_64(r0,r2)
+
+sub_20(r1):
+    r2=0
+    for i=[1,r1]:
+        r2+=sub_29(r1)
+    return r2
+
+sub_29(r1):
+    r2=0
+    while r1>=2:
+        r1=sub_45(r1)
+        r2++
+    return r2
+
+sub_45(r1):
+    if r1%2==0:
+        return r1/2
+    else:
+        return 3*r1+1
+    
+    r2=0
+    r0=r1
+    r2=r0
+    r0,r1=r2/2,r2%2
+    if r1==0:
+        return
+    r1=0
+    r1=r2
+    r0=r1
+    r2+=r0
+    r0=r1
+    r0+=r1
+    r0+=r2
+    ++r0
+
+sub_64(r1,r2):
+    return fib(r1)%r2
+    0,1,1,2,3,5,...
+
+    r0=r1
+    r3=r0
+    if r1==0:
+        return 0
+    --r3
+    ++r0
+    if r1==1:
+        return 1
+    --r3
+    --r1
+    r0=sub_64(r1,r2)
+    r4=r0
+    if r1==0:
+        return r0
+    --r1
+    r0=sub_64(r1,r2)
+    r4+=r0
+    r1=r4
+    return r1%r2
+
+
+sub_84(r1):
+    return r1
+
+sub_92(r2):
+    return r2/2,r2%2 
+
+
+sub_99(r1,r2):
+    return r1%r2
+
+sub_108(r1,r2):
+    if r1>=r2:
+        return 0
+    else:
+        return 1
+
+sub_113(r1,r2):
+    if r1<r2:
+        return
+    r1-=r2
+    return r1
